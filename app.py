@@ -32,7 +32,7 @@ st.pyplot(fig1)
 st.subheader(" Appliance-wise Count va energy Consumption")
 appliances = ["Appliance_AC", "Appliance_Fan", "Appliance_Light", "Fridge", "washing_Machine", "EV Charging"]
 selected_appliance = st.selectbox("Select Appliance", appliances)
-fig2, ax2 = plt.subplot()
+fig2, ax2 = plt.subplots()
 sns.barplot(x=df[selected_appliance], y=df["Monthly_Energy_Consumption_kWh"], ax=ax2)
 ax2.set_xlabel(f"No. of {selected_appliance.replace('_',' ')}")
 ax2.set_ylabel("Energy Consumption (kwh)")
